@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Altiora - Register</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+  :root {
+    --true-blue :  #137DC5;
+    --midnight-navy:#112D4E;
+    --canary-yellow :#FCE38A;
+   }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  body {
+    background: #fff;
+    min-height: 100vh;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    padding: 0;
+  }
+  .container {
+    width: 100%;
+    max-width: none;
+    height: 100vh;
+    background: #fff;
+    border-radius: 0;
+    box-shadow: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .side-image {
+    background-image: url("images/form-background.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    border-radius: 0;
+  }
+
+  .form-logo {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .form-logo img {
+    width: 160px;
+    height: auto;
+  }
+
+  .text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 0 40px;
+    z-index: 2;
+  }
+
+  .text-overlay p {
+    color: rgb(211, 221, 236);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.6;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .form-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+  }
+
+  .form-container {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .form-header {
+    text-align: center;
+    margin-bottom: 45px;
+  }
+
+  .form-header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #2d2d2d;
+  }
+
+  .form-grid {
+    display: grid;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .input-group {
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  .form-input {
+    width: 100%;
+    height: 48px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    outline: none;
+    padding: 16px 12px 4px 12px;
+    color: #40414a;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+  }
+
+  .form-input:focus {
+    border-bottom: 1px solid #743ae1;
+  }
+
+  .form-label {
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    color: #999;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    font-size: 16px;
+  }
+
+  .form-input:focus ~ .form-label,
+  .form-input:valid ~ .form-label,
+  .form-input:not(:placeholder-shown) ~ .form-label {
+    top: -8px;
+    font-size: 12px;
+    color: var(--true-blue);
+  }
+
+  .submit-btn {
+    width: 100%;
+    height: 48px;
+    background: var(--midnight-navy);
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    margin-top: 10px;
+    color: white;
+  }
+
+  .submit-btn:hover {
+    background: var(--true-blue);
+    color: white;
+  }
+
+  .signin-link {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 25px;
+    color: #666;
+  }
+
+  .signin-link a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s ease;
+  }
+
+  .signin-link a:hover {
+    text-decoration: underline;
+    color: var(--canary-yellow);
+  }
+
+  .sub-text {
+    text-align: center;
+    font-size: 16px;
+    color: #555;
+    margin-top: -30px;
+    margin-bottom: 35px;
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      grid-template-columns: 1fr;
+      height: auto;
+      max-width: 420px;
+    }
+    .side-image {
+      height: 200px;
+      border-radius: 10px 10px 0 0;
+    }
+    .text-overlay {
+      top: 70%;
+    }
+    .text-overlay p {
+      font-size: 16px;
+    }
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+    .form-section {
+      padding: 30px 20px;
+    }
+  }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="side-image">
+        <div class="text-overlay">
+          <p><strong><i>Join us to</i></strong></p>
+          <p>A flight experience that feels like poetry in motion</p>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <div class="form-container">
+          <div class="form-logo">
+            <img src="images/altiora-logo-blue.png" alt="Altiora Logo">
+          </div>
+          <div class="form-header">
+            <h1>Create account</h1>
+          </div>
+          <p class="sub-text">Join thousands of travelers and start your journey today</p>
+
+          <form id="signupForm">
+            <!-- Name fields (side by side) -->
+            <div class="form-row">
+              <div class="input-group">
+                <input type="text" class="form-input" name="firstName" id="firstName" placeholder=" " required>
+                <label for="firstName" class="form-label">First Name</label>
+              </div>
+              <div class="input-group">
+                <input type="text" class="form-input" name="lastName" id="lastName" placeholder=" " required>
+                <label for="lastName" class="form-label">Last Name</label>
+              </div>
+            </div>
+
+            <!-- Phone -->
+            <div class="input-group">
+              <input type="tel" class="form-input" name="phone" id="phone" pattern="[0-9]{11}" placeholder=" " required>
+              <label for="phone" class="form-label">Phone</label>
+            </div>
+
+            <!-- Birthday -->
+            <div class="input-group">
+              <input type="date" class="form-input" name="birthday" id="birthday" placeholder=" " required>
+              <label for="birthday" class="form-label">Birthday</label>
+            </div>
+
+            <!-- Email -->
+            <div class="input-group">
+              <input type="email" class="form-input" name="email" id="email" placeholder=" " required>
+              <label for="email" class="form-label">Email</label>
+            </div>
+
+            <!-- Password -->
+            <div class="input-group">
+              <input type="password" class="form-input" name="password" id="password" placeholder=" " required>
+              <label for="password" class="form-label">Password</label>
+            </div>
+
+            <button type="submit" class="submit-btn">Sign Up</button>
+
+            <div class="signin-link">
+              Already have an account? <a href="login.html">Sign In Here</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById('signupForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const formData = {
+          firstName: document.getElementById('firstName').value.trim(),
+          lastName: document.getElementById('lastName').value.trim(),
+          phone: document.getElementById('phone').value.trim(),
+          birthday: document.getElementById('birthday').value,
+          email: document.getElementById('email').value.trim(),
+          password: document.getElementById('password').value
+        };
+
+        const message = `
+First Name: ${formData.firstName}
+Last Name: ${formData.lastName}
+Phone: ${formData.phone}
+Birthday: ${formData.birthday}
+Email: ${formData.email}
+Password: ${formData.password}
+`;
+
+        alert(message);
+      });
+    </script>
+  </body>
+</html>
