@@ -9,9 +9,11 @@
    --background-color: #f8f9fa;
    --text-color: #343a40;
    --accent-color: #28a745;
-  }
+}
+
 
 *{
+
   font-family: 'Poppins', sans-serif;
 }
 
