@@ -1,198 +1,213 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-
 :root {
    --true-blue :  #137DC5;
    --midnight-navy:#112D4E;
    --canary-yellow :#FCE38A;
-   --primary-color: #007bff;
-   --secondary-color: #6c757d;
-   --background-color: #f8f9fa;
-   --text-color: #343a40;
-   --accent-color: #28a745;
-}
+  }
 
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Poppins', sans-serif;
+ }
 
-*{
+ body {
+   background: #fff;
+   min-height: 100vh;
+   display: flex;
+   align-items: stretch;
+   justify-content: center;
+   padding: 0;
+ }
+ .container {
+   width: 100%;
+   max-width: none;
+   height: 100vh;
+   background: #fff;
+   border-radius: 0;
+   box-shadow: none;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+ }
 
-  font-family: 'Poppins', sans-serif;
-}
-
-html, body {
- height: 100%;
- width: 100%;
- margin: 0;
- padding: 0;
-}
-
- .wrapper {
- background: var(--background-color);
- width: 100%;
- height: 100%;
-}
-.container {
- max-width: 100% !important;
- padding: 0 !important;
-}
-
-.main {
- display: flex;
- justify-content: center;
- align-items: center;
- height: 100vh; /* full viewport height */
- width: vw;  /* full viewport width */
-}
-
-.side-image{
-   background-image: url(/images/Form-right-panel.jpg);
+ .side-image {
+   background-image: url("images/form-background.jpg");
    background-position: center;
    background-size: cover;
    background-repeat: no-repeat;
-   border-radius: 0;
    position: relative;
+   border-radius: 0;
+ }
 
-}
+ .form-logo {
+   text-align: center;
+   margin-bottom: 20px;
+ }
 
-.form-logo{
- position: static;      /* cancel absolute positioning */
- display: block;
- margin: 0 auto 20px;   /* center & add space under */
- width: 200px;          /* tweak size as you like */
-}
+ .form-logo img {
+   width: 160px;
+   height: auto;
+ }
 
-.row {
- width: 100%;      /* take full width */
- height: 100%;     /* take full height */
- border-radius: 0; /* remove rounded edges if you want edge-to-edge */
- background: #fff;
- padding: 0;
- box-shadow: none; /* optional, remove shadow for fullscreen clean look */
-}
-.text{
+ .text-overlay {
    position: absolute;
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
-}
-.text p{
-   color: #fff;
+   text-align: center;
+   padding: 0 40px;
+   z-index: 2;
+ }
+
+ .text-overlay p {
+   color: rgb(211, 221, 236);
    font-size: 20px;
-   font-family: 'Poppins', sans-serif;
+   font-weight: 500;
+   line-height: 1.6;
    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-   font-weight: 700;
-}
+ }
 
-.text i {
-   font-family: 'Poppins', sans-serif;
-   color: #fff;
-   font-size: 20px;
-   font-weight: 700;
-}
-
-.right{
- display: flex;
- justify-content: center;
- align-items: center;
- position: relative;
-}
-.input-box{
- width: 450px;
- box-sizing: border-box;
-}
-
-
-.input-box header{
-font-weight: 700;
- text-align: center;
- margin-bottom: 45px;
- font-size: 32px;   /* increase size */
- color: #222;
-}
-.input-field{
+ .form-section {
    display: flex;
-   flex-direction: column;
-   position: relative;
-   padding: 0 10px 0 10px;
-}
-.input{
-   height: 45px;
+   align-items: center;
+   justify-content: center;
+   padding: 40px;
+ }
+
+ .form-container {
    width: 100%;
+   max-width: 500px;
+ }
+
+ .form-header {
+   text-align: center;
+   margin-bottom: 45px;
+ }
+
+ .form-header h1 {
+   font-size: 28px;
+   font-weight: 700;
+   color: #2d2d2d;
+ }
+
+ .form-grid {
+   display: grid;
+   gap: 16px;
+   margin-bottom: 20px;
+ }
+
+ .form-row {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 16px;
+ }
+
+ .input-group {
+   position: relative;
+   margin-bottom: 20px;
+ }
+
+ .form-input {
+   width: 100%;
+   height: 48px;
    background: transparent;
    border: none;
    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
    outline: none;
-   margin-bottom: 20px;
+   padding: 16px 12px 4px 12px;
    color: #40414a;
-}
-.input-box .input-field label{
-   position: absolute;
-   top: 10px;
-   left: 10px;
-   pointer-events: none;
-   transition: .5s;
-}
-.input-field input:focus ~ label
-  {
-   top: -10px;
-   font-size: 13px;
+   font-size: 16px;
+   transition: border-color 0.3s ease;
  }
- .input-field input:valid ~ label
- {
-  top: -10px;
-  font-size: 13px;
-  color: #5d5076;
-}
-.input-field .input:focus, .input-field .input:valid{
-   border-bottom: 1px solid var(--true-blue);
-}
-.submit{
-   border: none;
-   outline: none;
-   height: 45px;
+
+ .form-input:focus {
+   border-bottom: 1px solid #743ae1;
+ }
+
+ .form-label {
+   position: absolute;
+   left: 12px;
+   top: 12px;
+   color: #999;
+   pointer-events: none;
+   transition: all 0.3s ease;
+   font-size: 16px;
+ }
+
+ .form-input:focus ~ .form-label,
+ .form-input:valid ~ .form-label,
+ .form-input:not(:placeholder-shown) ~ .form-label {
+   top: -8px;
+   font-size: 12px;
+   color: var(--true-blue);
+ }
+
+ .submit-btn {
+   width: 100%;
+   height: 48px;
    background: var(--midnight-navy);
+   border: none;
    border-radius: 5px;
-   transition: .4s;
+   font-size: 16px;
+   font-weight: 500;
+   cursor: pointer;
+   transition: all 0.4s ease;
+   margin-top: 10px;
    color: white;
-}
-.submit:hover{
+ }
+
+ .submit-btn:hover {
    background: var(--true-blue);
-   color: #fff;
-}
-.signin{
+   color: white;
+ }
+
+ .signin-link {
    text-align: center;
-   font-size: small;
+   font-size: 14px;
    margin-top: 25px;
-}
-span a{
+   color: #666;
+ }
+
+ .signin-link a {
+   color: #000;
    text-decoration: none;
    font-weight: 700;
-   color: #000;
-   transition: .5s;
-}
-span a:hover{
+   transition: all 0.3s ease;
+ }
+
+ .signin-link a:hover {
    text-decoration: underline;
    color: var(--canary-yellow);
-}
+ }
 
-.sub-text {
- text-align: center;
- font-size: 16px;
- color: #555;
- margin-top: -30px; /* pull it closer to header */
- margin-bottom: 35px; /* spacing before form */
-}
+ .sub-text {
+   text-align: center;
+   font-size: 16px;
+   color: #555;
+   margin-top: -30px;
+   margin-bottom: 35px;
+ }
 
-@media only screen and (max-width: 768px){
-  
-   .text{
-       position: absolute;
-       top: 70%;
-       text-align: center;
+ @media (max-width: 768px) {
+   .container {
+     grid-template-columns: 1fr;
+     height: auto;
+     max-width: 420px;
    }
-   .text p, i{
-       font-size: 16px;
+   .side-image {
+     height: 200px;
+     border-radius: 10px 10px 0 0;
    }
-   .row{
-       max-width:420px;
-       width: 100%;
+   .text-overlay {
+     top: 70%;
    }
-}
+   .text-overlay p {
+     font-size: 16px;
+   }
+   .form-row {
+     grid-template-columns: 1fr;
+   }
+   .form-section {
+     padding: 30px 20px;
+   }
+ }
