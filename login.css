@@ -31,7 +31,7 @@
  }
 
  .side-image {
-   background-image: url("/images/form-background.jpg");
+   background-image: url("images/form-background.jpg");
    background-position: center;
    background-size: cover;
    background-repeat: no-repeat;
