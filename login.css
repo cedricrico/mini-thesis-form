@@ -41,7 +41,7 @@ html, body {
 }
 
 .side-image{
-   background-image: url("/images/Form-right-panel.jpg");
+   background-image: url("images/Form-right-panel.jpg");
    background-position: center;
    background-size: cover;
    background-repeat: no-repeat;
