@@ -12,12 +12,6 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
-html, body {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-  }
 
 body {
   background: #fff;
@@ -26,7 +20,6 @@ body {
   align-items: stretch;
   justify-content: center;
   padding: 0;
-  width: 100%;
 }
 .container {
   width: 100%;
@@ -40,7 +33,7 @@ body {
 }
 
 .side-image {
-  background-image: url(/images/form-background.jpg);
+  background-image: url("images/form-background.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
