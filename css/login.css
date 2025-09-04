@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+   --true-blue :  #137DC5;
+   --midnight-navy:#112D4E;
+   --canary-yellow :#FCE38A;
+   --primary-color: #007bff;
+   --secondary-color: #6c757d;
+   --background-color: #f8f9fa;
+   --text-color: #343a40;
+   --accent-color: #28a745;
+  }
+
+*{
+  font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+ height: 100%;
+ width: 100%;
+ margin: 0;
+ padding: 0;
+}
+
+ .wrapper {
+ background: var(--background-color);
+ width: 100%;
+ height: 100%;
+}
+.container {
+ max-width: 100% !important;
+ padding: 0 !important;
+}
+
+.main {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ height: 100vh; /* full viewport height */
+ width: vw;  /* full viewport width */
+}
+
+.side-image{
+   background-image: url(/images/Form-right-panel.jpg);
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   border-radius: 0;
+   position: relative;
+
+}
+
+.form-logo{
+ position: static;      /* cancel absolute positioning */
+ display: block;
+ margin: 0 auto 20px;   /* center & add space under */
+ width: 200px;          /* tweak size as you like */
+}
+
+.row {
+ width: 100%;      /* take full width */
+ height: 100%;     /* take full height */
+ border-radius: 0; /* remove rounded edges if you want edge-to-edge */
+ background: #fff;
+ padding: 0;
+ box-shadow: none; /* optional, remove shadow for fullscreen clean look */
+}
+.text{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+.text p{
+   color: #fff;
+   font-size: 20px;
+   font-family: 'Poppins', sans-serif;
+   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+   font-weight: 700;
+}
+
+.text i {
+   font-family: 'Poppins', sans-serif;
+   color: #fff;
+   font-size: 20px;
+   font-weight: 700;
+}
+
+.right{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ position: relative;
+}
+.input-box{
+ width: 450px;
+ box-sizing: border-box;
+}
+
+
+.input-box header{
+font-weight: 700;
+ text-align: center;
+ margin-bottom: 45px;
+ font-size: 32px;   /* increase size */
+ color: #222;
+}
+.input-field{
+   display: flex;
+   flex-direction: column;
+   position: relative;
+   padding: 0 10px 0 10px;
+}
+.input{
+   height: 45px;
+   width: 100%;
+   background: transparent;
+   border: none;
+   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+   outline: none;
+   margin-bottom: 20px;
+   color: #40414a;
+}
+.input-box .input-field label{
+   position: absolute;
+   top: 10px;
+   left: 10px;
+   pointer-events: none;
+   transition: .5s;
+}
+.input-field input:focus ~ label
+  {
+   top: -10px;
+   font-size: 13px;
+ }
+ .input-field input:valid ~ label
+ {
+  top: -10px;
+  font-size: 13px;
+  color: #5d5076;
+}
+.input-field .input:focus, .input-field .input:valid{
+   border-bottom: 1px solid var(--true-blue);
+}
+.submit{
+   border: none;
+   outline: none;
+   height: 45px;
+   background: var(--midnight-navy);
+   border-radius: 5px;
+   transition: .4s;
+   color: white;
+}
+.submit:hover{
+   background: var(--true-blue);
+   color: #fff;
+}
+.signin{
+   text-align: center;
+   font-size: small;
+   margin-top: 25px;
+}
+span a{
+   text-decoration: none;
+   font-weight: 700;
+   color: #000;
+   transition: .5s;
+}
+span a:hover{
+   text-decoration: underline;
+   color: var(--canary-yellow);
+}
+
+.sub-text {
+ text-align: center;
+ font-size: 16px;
+ color: #555;
+ margin-top: -30px; /* pull it closer to header */
+ margin-bottom: 35px; /* spacing before form */
+}
+
+@media only screen and (max-width: 768px){
+  
+   .text{
+       position: absolute;
+       top: 70%;
+       text-align: center;
+   }
+   .text p, i{
+       font-size: 16px;
+   }
+   .row{
+       max-width:420px;
+       width: 100%;
+   }
+}
